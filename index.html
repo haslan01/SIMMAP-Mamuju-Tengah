@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Apps Script Saya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Memastikan iframe memenuhi layar dengan rapi */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 80px); /* Mengurangi tinggi header */
+            overflow: hidden;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header Sederhana -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Dashboard Apps Script</h1>
+            <a href="https://github.com" class="text-sm bg-blue-700 px-3 py-1 rounded hover:bg-blue-800 transition">Kembali ke GitHub</a>
+        </div>
+    </header>
+
+    <!-- Kontainer Iframe -->
+    <main class="container mx-auto mt-4 px-4">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <div class="iframe-container">
+                <!-- GANTI URL DI BAWAH INI DENGAN URL WEB APP ANDA -->
+                <iframe 
+                    src="https://script.google.com/macros/s/AKfycbxmq_fSJd_DApqbdlVl2RaVBotcVlIl7QQZWFNkRdYiNLxDAODYkvjPLk-Wk5YXtx8GMQ/exec" 
+                    allow="geolocation; microphone; camera">
+                    Browser Anda tidak mendukung iframe.
+                </iframe>
+            </div>
+        </div>
+        
+        <p class="text-center text-gray-500 text-sm mt-4">
+            Aplikasi ini di-hosting di Google Apps Script dan disematkan melalui GitHub Pages.
+        </p>
+    </main>
+
+</body>
+</html>
